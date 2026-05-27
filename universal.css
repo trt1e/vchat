@@ -1,0 +1,94 @@
+/* Base */
+:root {
+    --bg-color: #f6f2f8; /*for the background*/
+
+    --other-bg-color: #e7dbeb; /*for things with a clearly differant background than --bg-color*/
+    --dark-bg-color: #cdbfd2;
+    --darker-bg-color: #ae9fb4;
+
+    --text-color: #110914; /*for text*/
+    --lighter-text-color: #37273d; /*for less inportant text*/
+    
+    --primary-color: #a65bc0;
+    --primary-half-color: hsl(285, 44%, 55%, 50%);
+    --secondary-color: #9669a5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    height: 100%;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: var(--text-color);
+    overflow-wrap: anywhere;
+
+    display: flex;
+    justify-content: space-evenly;
+}
+@media (width < 60rem) {
+    body {
+        display: block;
+    }
+}
+
+/* Hide scrollbar */
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* Main */
+main {
+    padding: 2rem;
+    margin-right: 25%; /*REMOVE IF ELEMENT TO RIGHT*/
+    width: calc(60rem - 4rem);
+    min-height: calc(100% - 4rem);
+    height: fit-content;
+    /*
+    border-left: var(--darker-bg-color) solid 2px;
+    border-right: var(--darker-bg-color) solid 2px;
+    */
+}
+@media (100rem <= width <= 120rem) {
+    main {
+        width: calc(45rem - 4rem);
+    }
+}
+@media (60rem <= width < 100rem) {
+    main {
+        width: calc(35rem - 4rem);
+    }
+}
+@media (width < 60rem) {
+    main {
+        padding: 1rem;
+        margin: 1rem;
+        width: calc(100% - 4rem);
+    }
+}
+
+/* Logo image */
+#logo_img {
+    width: 10rem;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+}
+@media (width < 60rem) {
+    #logo_img {
+        position: static;
+        margin: 2rem calc(50% - 5rem);
+    }
+}
+
+/* Text styling */
+h1 {
+    text-align: center;
+}

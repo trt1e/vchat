@@ -1,0 +1,26 @@
+#own_profile {
+    background-color: transparent;
+    padding: 1rem;
+    margin: 1rem;
+    margin-top: 2rem;
+    width: 18rem;
+    min-height: 20rem;
+    display: flex;
+    height: fit-content;
+    border-radius: 1rem;
+    box-shadow: 0 0 2rem var(--primary-half-color);
+}
+@media (width < 60rem) {
+    #own_profile {
+        width: calc(100% - 4rem);
+        min-height: 10rem;
+    }
+}
+#own_profile img {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+}
+#own_profile .container {
+    margin: 0.5rem;
+}
